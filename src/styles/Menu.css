@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #222831;
+    --second-color: #2D4059;
+    --third-color: #FF5722;
+    --text-color: #EEEEEE;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@400;600&family=Kdam+Thmor+Pro&display=swap');
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+.title {
+    margin-left: 80px;
+    font-family: 'Akshar', sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.59);
+    letter-spacing: 3px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.btnLogin {
+    color: var(--third-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--third-color);
+    padding: 8px 30px;
+    margin-right: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.btnLogin:hover {
+    color: var(--text-color);
+}
+
+.btnLogin::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: var(--third-color);
+    z-index: -1;
+    transition: all 1s;
+}
+
+.btnLogin:hover::before {
+    width: 160%;
+}
+
+
