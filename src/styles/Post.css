@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #222831;
+    --second-color: #2D4059;
+    --third-color: #FF5722;
+    --text-color: #EEEEEE;
+}
+
+.post {
+    width: 90%;
+    height: 120px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+    margin: 5px 10px;
+}
+
+.post:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 90%;
+    height: 100%;
+}
+
+p {
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--third-color);
+    margin: 5px 0 0;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    width: 10%;
+    height: 100%;
+}
+
+.btn {
+    width: 40px;
+    height: 30px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.delete {
+    width: 15px;
+    transition-duration: 0.3s;
+}
+
+.edit {
+    width: 15px;
+    transition-duration: 0.3s;
+}
+
+.edi:hover {
+    width: 80px;
+    transition-duration: 0.3s;
+    background-color: rgb(69, 143, 255);
+    align-items: center;
+}
+
+.del:hover {
+    width: 80px;
+    transition-duration: 0.3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+}
+  
+.btn:hover .delete {
+    width: 20px;
+    transition-duration: 0.3s;
+    transform: translateY(60%);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.btn:hover .edit {
+    width: 20px;
+    transition-duration: 0.3s;
+    transform: translateY(60%);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+  
+.del::before {
+    display: none;
+    content: "Delete";
+    color: white;
+    transition-duration: 0.3s;
+    font-size: 2px;
+}
+
+.edi::before {
+    display: none;
+    content: "Edit";
+    color: white;
+    transition-duration: 0.3s;
+    font-size: 2px;
+}
+  
+.btn:hover::before {
+    display: block;
+    padding-right: 10px;
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(0px);
+    transition-duration: 0.3s;
+}
+
+
+
+
+
