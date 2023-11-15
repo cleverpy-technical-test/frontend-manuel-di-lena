@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../styles/PostList.css';
 import { IPost, getPosts } from '../services/posts';
 import { Post } from './Post';
 
@@ -14,9 +15,9 @@ export function PostList() {
     }, []);
 
     return (
-        <div>
+        <div className='postList'>
             <h2>Post List</h2>
-            <div>
+            <div className='list'>
                 {
                     posts.map((post) => (
                         <Post 

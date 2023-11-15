@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #222831;
+    --second-color: #2D4059;
+    --third-color: #FF5722;
+    --text-color: #EEEEEE;
+}
+
+.postList {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    width: 75%;
+    height: 85vh;
+}
+
+h2 {
+    margin-left: 50px;
+    font-family: 'Akshar', sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.59);
+    letter-spacing: 3px;
+    line-height: 1;
+}
+
+.list {
+    margin: 5px;
+    max-height: 90%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
