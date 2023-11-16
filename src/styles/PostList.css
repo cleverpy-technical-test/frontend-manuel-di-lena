@@ -14,8 +14,15 @@
     height: 85vh;
 }
 
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 h2 {
-    margin-left: 50px;
+    padding-left: 50px;
     font-family: 'Akshar', sans-serif;
     font-family: 'Kdam Thmor Pro', sans-serif;
     text-shadow: 4px 4px 5px rgba(0,0,0,0.59);
@@ -23,10 +30,39 @@ h2 {
     line-height: 1;
 }
 
+.actions {
+    margin-right: 75px;
+}
+
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.5s;
+}
+
+.icon:hover {
+    color: var(--third-color);
+}
+
 .list {
     margin: 5px;
     max-height: 90%;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.list::-webkit-scrollbar {
+    width: 12px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.list::-webkit-scrollbar-track {
+    background-color: transparent;
 }

@@ -7,9 +7,10 @@ interface PostProps {
     userId: number;
     title: string;
     body: string;
+    onDelete: () => void;
 };
 
-export function Post({ userId, title, body }: PostProps) {
+export function Post({ userId, title, body, onDelete }: PostProps) {
     return (
         <div className='post'>
             <div className='info'>
@@ -21,7 +22,7 @@ export function Post({ userId, title, body }: PostProps) {
                 <button className='btn edi'>
                     <CiEdit className='edit' />
                 </button>
-                <button className='btn del'>
+                <button className='btn del' onClick={onDelete}>
                     <MdDeleteOutline className='delete' />
                 </button>
             </div>

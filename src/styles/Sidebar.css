@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #222831;
+    --second-color: #2D4059;
+    --third-color: #FF5722;
+    --text-color: #EEEEEE;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    width: 15%;
+    max-width: 25%;
+    height: 85vh;
+}

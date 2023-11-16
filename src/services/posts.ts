@@ -19,3 +19,13 @@ export const getPosts = async (): Promise<IPost[]> => {
         throw new Error('Could not get post list');
     }
 };
+
+// Delete a specific post
+// export const deletePost = async (id: number): Promise<void> => {
+//     try {
+//         await axios.delete(`${apiUrl}/${id}`);
+
+//     } catch (err) {
+//         throw new Error('Post could not be deleted');
+//     }
+// }
