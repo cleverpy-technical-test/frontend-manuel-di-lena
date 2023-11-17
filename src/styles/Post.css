@@ -48,12 +48,12 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-evenly;
+    justify-content:flex-start;
     width: 10%;
     height: 100%;
 }
 
-.btn {
+.btnDel {
     width: 40px;
     height: 30px;
     background-color: transparent;
@@ -75,37 +75,14 @@ h3 {
     transition-duration: 0.3s;
 }
 
-.edit {
-    width: 15px;
-    transition-duration: 0.3s;
-}
-
-.edi:hover {
-    width: 80px;
-    transition-duration: 0.3s;
-    background-color: rgb(69, 143, 255);
-    align-items: center;
-}
-
-.del:hover {
+.btnDel:hover {
     width: 80px;
     transition-duration: 0.3s;
     background-color: rgb(255, 69, 69);
     align-items: center;
 }
-  
-.btn:hover .delete {
-    width: 20px;
-    transition-duration: 0.3s;
-    transform: translateY(60%);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-}
 
-.btn:hover .edit {
+.btnDel:hover .delete {
     width: 20px;
     transition-duration: 0.3s;
     transform: translateY(60%);
@@ -115,8 +92,8 @@ h3 {
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
 }
-  
-.del::before {
+ 
+.btnDel::before {
     display: none;
     content: "Delete";
     color: white;
@@ -124,15 +101,7 @@ h3 {
     font-size: 2px;
 }
 
-.edi::before {
-    display: none;
-    content: "Edit";
-    color: white;
-    transition-duration: 0.3s;
-    font-size: 2px;
-}
-  
-.btn:hover::before {
+.btnDel:hover::before {
     display: block;
     padding-right: 10px;
     font-size: 13px;

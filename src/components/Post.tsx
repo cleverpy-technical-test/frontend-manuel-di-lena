@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Post.css';
-import { CiEdit } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 
 interface PostProps {
@@ -19,10 +18,7 @@ export function Post({ userId, title, body, onDelete }: PostProps) {
                 <p>{body}</p>
             </div>
             <div className='btns'>
-                <button className='btn edi'>
-                    <CiEdit className='edit' />
-                </button>
-                <button className='btn del' onClick={onDelete}>
+                <button className='btnDel' onClick={onDelete}>
                     <MdDeleteOutline className='delete' />
                 </button>
             </div>

@@ -4,11 +4,13 @@ import { IPost, getPosts } from '../services/posts';
 import { Post } from './Post';
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { Form } from './Form';
+import useToggle from '../hooks/useToggle';
 
 export function PostList() {
 
     const [posts, setPosts] = useState<IPost[]>([]);
-    const [formVisible, setFormVisible] = useState<Boolean>(false);
+    //const [formVisible, setFormVisible] = useState<Boolean>(false);
+    const [formVisible, toggleForm] = useToggle(false);
 
     // Show all posts obtained when starting the app
     useEffect(() => {
@@ -27,9 +29,9 @@ export function PostList() {
         setPosts((prevPosts) => prevPosts.filter(post => post.id !== postId));
     };
 
-    const formVisibility = () => {
-        setFormVisible(!formVisible);
-    }
+    // const formVisibility = () => {
+    //     setFormVisible(!formVisible);
+    // }
 
     return (
         <div className='container'>
@@ -37,8 +39,8 @@ export function PostList() {
                 <div className='header'>
                     <h2>Post List</h2>
                     <IoIosAddCircleOutline 
-                            className='icon' 
-                            onClick={formVisibility}
+                        className='icon' 
+                        onClick={toggleForm}
                     />
                 </div>
                 <div className='list'>
@@ -55,13 +57,17 @@ export function PostList() {
                     }
                 </div>
             </div>
-            <div className='postForm' style={{ display: formVisible ? 'flex' : 'none' }}>
-                <Form 
-                    onAddPost={addPost}
-                    onHideForm={formVisibility}
-                    posts={posts}
-                />
-            </div>
+            {
+                formVisible 
+                    &&
+                <div className='postForm'>
+                    <Form 
+                        onAddPost={addPost}
+                        onHideForm={toggleForm}
+                        posts={posts}
+                    />
+                </div>
+            }
         </div>
 
     );
