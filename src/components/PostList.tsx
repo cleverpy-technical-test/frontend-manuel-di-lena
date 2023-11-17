@@ -3,7 +3,6 @@ import '../styles/PostList.css';
 import { IPost, getPosts } from '../services/posts';
 import { Post } from './Post';
 import { IoIosAddCircleOutline } from "react-icons/io";
-import { CiFilter } from "react-icons/ci";
 import { Form } from './Form';
 
 export function PostList() {
@@ -17,6 +16,11 @@ export function PostList() {
             .then((data) => setPosts(data))
             .catch((error) => console.error(error));
     }, []);
+
+    // Function to add new posts
+    const addPost = (newPost: IPost) => {
+        setPosts((prevPosts) => [newPost, ...prevPosts]);
+    }
 
     // Function to delete a post
     const deletePost = (postId: number) => {
@@ -52,7 +56,11 @@ export function PostList() {
                 </div>
             </div>
             <div className='postForm' style={{ display: formVisible ? 'flex' : 'none' }}>
-                <Form />
+                <Form 
+                    onAddPost={addPost}
+                    onHideForm={formVisibility}
+                    posts={posts}
+                />
             </div>
         </div>
 
