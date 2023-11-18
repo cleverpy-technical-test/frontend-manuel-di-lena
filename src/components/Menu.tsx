@@ -1,11 +1,20 @@
 import React from 'react';
 import '../styles/Menu.css';
 
-export function Menu() {
+interface MenuProps {
+    onHideModal: () => void;
+}
+
+export function Menu({ onHideModal }: MenuProps) {
     return (
         <div className='menu'>
                 <h1 className='title'>Technical Test</h1>
-                <button className='btnLogin'>Login</button>
+                <button 
+                    className='btnLogin'
+                    onClick={onHideModal}
+                >
+                    Login
+                </button>
         </div>
     );
 };

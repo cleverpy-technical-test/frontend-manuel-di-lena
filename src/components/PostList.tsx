@@ -9,7 +9,6 @@ import useToggle from '../hooks/useToggle';
 export function PostList() {
 
     const [posts, setPosts] = useState<IPost[]>([]);
-    //const [formVisible, setFormVisible] = useState<Boolean>(false);
     const [formVisible, toggleForm] = useToggle(false);
 
     // Show all posts obtained when starting the app
