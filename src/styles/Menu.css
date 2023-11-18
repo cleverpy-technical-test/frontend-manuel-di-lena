@@ -26,6 +26,7 @@
     line-height: 1;
     text-transform: uppercase;
 }
+
 .btnLogin {
     color: var(--third-color);
     text-transform: uppercase;
@@ -61,6 +62,12 @@
 
 .btnLogin:hover::before {
     width: 160%;
+}
+
+@media screen and (max-width: 650px) {
+    .title {
+        font-size: 20px;
+    }
 }
 
 

@@ -73,5 +73,23 @@ h2 {
     height: 100%;
 }
 
+@media screen and (max-width: 650px) {
+    .postList {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .icon {
+        margin-right: 20px;
+    }
+
+    .postForm {
+        width: 500px;
+    }
+}
+
 
 

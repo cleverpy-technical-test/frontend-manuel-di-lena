@@ -15,20 +15,32 @@ export function Login({ onHideModal }: LoginProps) {
         <div className='modalContainer'>
             <div className='modal'>
                 <form className='modalForm'>
-                    <div className='formGroup'>
-                        <label>Email</label>
-                        <input required name='email' id='email' type='text' />
+                    <div className='modalGroup'>
+                        <input 
+                            required 
+                            name='email' 
+                            type='text' 
+                            className='modalField' 
+                            placeholder='Email'
+                        />
+                        <label className='modalLabel'>Email</label>
                     </div>
-                    <div className='formGroup'>
-                        <label>Password</label>
-                        <input type="password" required name='pass' id='pass' />
+                    <div className='modalGroup'>
+                        <input 
+                            type="password" 
+                            required 
+                            name='pass' 
+                            className='modalField' 
+                            placeholder='Password'
+                        />
+                        <label className='modalLabel'>Password</label>
                     </div>
                     <button
-                        className='formBtn'
+                        className='modalBtn'
                         type='submit'
                         onClick={handleLogin}
                     >
-                        Login
+                        <span>Login</span>
                     </button>
                 </form>        
             </div>

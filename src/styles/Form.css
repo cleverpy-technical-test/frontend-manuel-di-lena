@@ -81,7 +81,7 @@
     font-weight: 700;
 }
   
-  /* reset input */
+/* reset input */
 .formField:required, .formField:invalid {
     box-shadow: none;
 }
