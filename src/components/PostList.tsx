@@ -38,6 +38,7 @@ export function PostList() {
                 <div className='header'>
                     <h2>Post List</h2>
                     <IoIosAddCircleOutline 
+                        id='btnIcon'
                         className='icon' 
                         onClick={toggleForm}
                     />

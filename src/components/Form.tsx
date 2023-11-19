@@ -50,6 +50,7 @@ export function Form({ onAddPost, onHideForm, posts }: FormProps) {
             <h3 className='subtitle'>New Post</h3>
             <div className='formGroup'>
                 <input 
+                    id='title'
                     type="input" 
                     className='formField' 
                     placeholder='Title' 
@@ -61,6 +62,7 @@ export function Form({ onAddPost, onHideForm, posts }: FormProps) {
             </div>
             <div className='formGroup'>
                 <textarea 
+                    id='content'
                     className='formField' 
                     placeholder='Content' 
                     required
@@ -71,6 +73,7 @@ export function Form({ onAddPost, onHideForm, posts }: FormProps) {
             </div>
             <div className='formGroup'>
                 <input 
+                    id='creator'
                     type="number" 
                     className='formField' 
                     placeholder='Creator' 
